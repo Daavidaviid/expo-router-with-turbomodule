@@ -10,11 +10,17 @@
 
 namespace facebook::react {
 
+using CustomType = NativeSampleModuleBaseCustomType<std::string, bool, int32_t>;
+template <>
+struct Bridging<CustomType>
+    : NativeSampleModuleBaseCustomTypeBridging<std::string, bool, int32_t> {};
+
 class NativeSampleModule : public NativeSampleModuleCxxSpec<NativeSampleModule> {
  public:
   NativeSampleModule(std::shared_ptr<CallInvoker> jsInvoker);
 
   std::string reverseString(jsi::Runtime& rt, std::string input);
+  CustomType passCustomType(jsi::Runtime& rt, CustomType input);
 };
 
 } // namespace facebook::react

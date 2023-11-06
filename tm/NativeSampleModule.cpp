@@ -9,4 +9,11 @@ std::string NativeSampleModule::reverseString(jsi::Runtime& rt, std::string inpu
   return std::string(input.rbegin(), input.rend());
 }
 
+CustomType NativeSampleModule::passCustomType(jsi::Runtime& rt, CustomType input) {
+  input.key = "1909";
+  input.enabled = !input.enabled;
+  input.timestamp = 42;
+  return input;
+}
+
 } // namespace facebook::react

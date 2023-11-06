@@ -1,7 +1,14 @@
-import { TurboModuleRegistry, TurboModule } from 'react-native';
+import { TurboModuleRegistry, TurboModule } from "react-native";
+
+export type CustomType = {
+  key: string;
+  enabled: boolean;
+  timestamp: number;
+};
 
 export interface Spec extends TurboModule {
   readonly reverseString: (input: string) => string;
+  readonly passCustomType: (input: CustomType) => CustomType;
 }
 
-export default TurboModuleRegistry.getEnforcing<Spec>('NativeSampleModule');
+export default TurboModuleRegistry.getEnforcing<Spec>("NativeSampleModule");
