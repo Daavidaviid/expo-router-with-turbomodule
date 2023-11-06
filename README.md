@@ -18,32 +18,32 @@ https://reactnative.dev/docs/next/the-new-architecture/cxx-custom-types
 
 Update `NativeSampleModule.ts`:
 
-```typescript
+```diff
 export interface Spec extends TurboModule {
   …
-  readonly getFrenchHello: () => string;
++  readonly getFrenchHello: () => string;
 }
 ```
 
 Update `NativeSampleModule.cpp`:
 
-```cpp
+```diff
 #include "NativeSampleModule.h"
 
 namespace facebook::react {
 
 …
 
-std::string NativeSampleModule::getFrenchHello(jsi::Runtime& rt) {
-  return "Bonjour";
-}
++ std::string NativeSampleModule::getFrenchHello(jsi::Runtime& rt) {
++   return "Bonjour";
++ }
 
 } // namespace facebook::react
 ```
 
 Update `NativeSampleModule.h`:
 
-```cpp
+```diff
 …
 
 namespace facebook::react {
@@ -54,7 +54,7 @@ class NativeSampleModule : public NativeSampleModuleCxxSpec<NativeSampleModule> 
  public:
   …
 
-  std::string getFrenchHello(jsi::Runtime& rt);
++   std::string getFrenchHello(jsi::Runtime& rt);
 };
 
 } // namespace facebook::react
@@ -62,7 +62,7 @@ class NativeSampleModule : public NativeSampleModuleCxxSpec<NativeSampleModule> 
 
 Update `app/index.tsx`:
 
-```tsx
+```diff
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import NativeSampleModule from "../tm/NativeSampleModule";
@@ -72,7 +72,7 @@ export default function Page() {
     <View style={styles.container}>
       …
 
-      <Text style={styles.title}>{NativeSampleModule.getFrenchHello()}</Text>
++       <Text style={styles.title}>{NativeSampleModule.getFrenchHello()}</Text>
     </View>
   );
 }
