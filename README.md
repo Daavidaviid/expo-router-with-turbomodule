@@ -88,4 +88,4 @@ Then run `bunx expo run:ios` or `bunx expo run:android`
 
 ## Notes
 
-When renaming `NativeSample`, you must a name with the following structure `NativeXXXXX`, otherwise it won't work 🤷‍♂️
+When renaming `NativeSample`, you must use a name with the following structure `NativeXXXXX`, otherwise it won't work 🤷‍♂️
