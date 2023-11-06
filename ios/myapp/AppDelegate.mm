@@ -6,7 +6,7 @@
 #import <React/CoreModulesPlugins.h>
 #import <ReactCommon/RCTTurboModuleManager.h>
 
-#import <NativeAxeCluster.h>
+#import <NativeSampleModule.h>
 
 @interface AppDelegate () <RCTTurboModuleManagerDelegate> {}
 @end
@@ -67,8 +67,8 @@
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const std::string &)name
                                                       jsInvoker:(std::shared_ptr<facebook::react::CallInvoker>)jsInvoker
 {
-  if (name == "NativeAxeCluster") {
-    return std::make_shared<facebook::react::NativeAxeCluster>(jsInvoker);
+  if (name == "NativeSampleModule") {
+    return std::make_shared<facebook::react::NativeSampleModule>(jsInvoker);
   }
   return nullptr;
 }

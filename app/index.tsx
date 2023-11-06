@@ -1,11 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import NativeAxeCluster from "../tm/NativeAxeCluster";
+import NativeSampleModule from "../tm/NativeSampleModule";
 
 export default function Page() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{NativeAxeCluster.reverseString("BONJOUR LES AMIS")}</Text>
+      <Text style={styles.title}>{NativeSampleModule.reverseString("BONJOUR LES AMIS")}</Text>
     </View>
   );
 }

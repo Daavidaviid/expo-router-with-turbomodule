@@ -4,4 +4,4 @@ export interface Spec extends TurboModule {
   readonly reverseString: (input: string) => string;
 }
 
-export default TurboModuleRegistry.getEnforcing<Spec>('NativeAxeCluster');
+export default TurboModuleRegistry.getEnforcing<Spec>('NativeSampleModule');

@@ -10,9 +10,9 @@
 
 namespace facebook::react {
 
-class NativeAxeCluster : public NativeAxeClusterCxxSpec<NativeAxeCluster> {
+class NativeSampleModule : public NativeSampleModuleCxxSpec<NativeSampleModule> {
  public:
-  NativeAxeCluster(std::shared_ptr<CallInvoker> jsInvoker);
+  NativeSampleModule(std::shared_ptr<CallInvoker> jsInvoker);
 
   std::string reverseString(jsi::Runtime& rt, std::string input);
 };

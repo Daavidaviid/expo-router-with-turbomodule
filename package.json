@@ -58,7 +58,7 @@
     "type": "all",
     "jsSrcsDir": "tm",
     "android": {
-      "javaPackageName": "com.facebook.fbreact.specs"
+      "javaPackageName": "com.devitgo.dummy"
     }
   },
   "private": true
