@@ -82,3 +82,5 @@ export default function Page() {
 ```
 
 Then run `bunx expo run:ios` or `bunx expo run:android`
+
+![](./repo_images/bonjour.png)
