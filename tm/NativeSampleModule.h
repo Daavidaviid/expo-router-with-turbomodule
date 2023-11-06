@@ -21,6 +21,7 @@ class NativeSampleModule : public NativeSampleModuleCxxSpec<NativeSampleModule> 
 
   std::string reverseString(jsi::Runtime& rt, std::string input);
   CustomType passCustomType(jsi::Runtime& rt, CustomType input);
+  std::string getFrenchHello(jsi::Runtime& rt);
 };
 
 } // namespace facebook::react

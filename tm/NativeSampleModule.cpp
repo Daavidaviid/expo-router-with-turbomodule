@@ -16,4 +16,8 @@ CustomType NativeSampleModule::passCustomType(jsi::Runtime& rt, CustomType input
   return input;
 }
 
+std::string NativeSampleModule::getFrenchHello(jsi::Runtime& rt) {
+  return "Bonjour";
+}
+
 } // namespace facebook::react

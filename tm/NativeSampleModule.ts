@@ -9,6 +9,7 @@ export type CustomType = {
 export interface Spec extends TurboModule {
   readonly reverseString: (input: string) => string;
   readonly passCustomType: (input: CustomType) => CustomType;
+  readonly getFrenchHello: () => string;
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>("NativeSampleModule");

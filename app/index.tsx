@@ -17,6 +17,8 @@ export default function Page() {
           })
         )}
       </Text>
+
+      <Text style={styles.title}>{NativeSampleModule.getFrenchHello()}</Text>
     </View>
   );
 }
