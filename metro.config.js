@@ -1,10 +1,17 @@
-// Learn more https://docs.expo.io/guides/customizing-metro
 const { getDefaultConfig } = require('expo/metro-config');
 
+const { mergeConfig } = require('@react-native/metro-config');
+
 /** @type {import('expo/metro-config').MetroConfig} */
-const config = getDefaultConfig(__dirname, {
-  // [Web-only]: Enables CSS support in Metro.
+const expoConfig = getDefaultConfig(__dirname, {
   isCSSEnabled: true,
 });
 
-module.exports = config;
+/** @type {import('metro-config').MetroConfig} */
+const config = {
+  transformer: {
+    getTransformOptions: async () => ({ transform: { inlineRequires: true } }),
+  },
+};
+
+module.exports = mergeConfig(expoConfig, config);

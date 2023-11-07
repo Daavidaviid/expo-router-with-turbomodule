@@ -1,0 +1,18 @@
+{
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "printWidth": 100,
+  "importOrderGroupNamespaceSpecifiers": true,
+  "importOrderSortSpecifiers": true,
+  "importOrder": [
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    "^@core/(.*)$",
+    "^@common/(.*)$",
+    "^@services/(.*)$",
+    "^@native_modules/(.*)$",
+    "^src/(.*)$",
+    "^[./]"
+  ]
+}
