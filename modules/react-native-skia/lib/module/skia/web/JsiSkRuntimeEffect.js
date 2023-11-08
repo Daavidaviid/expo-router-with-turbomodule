@@ -1,0 +1,45 @@
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+import { HostObject } from "./Host";
+import { JsiSkMatrix } from "./JsiSkMatrix";
+import { JsiSkShader } from "./JsiSkShader";
+export class JsiSkRuntimeEffect extends HostObject {
+  constructor(CanvasKit, ref, sksl) {
+    super(CanvasKit, ref, "RuntimeEffect");
+    this.sksl = sksl;
+
+    _defineProperty(this, "dispose", () => {
+      this.ref.delete();
+    });
+  }
+
+  source() {
+    return this.sksl;
+  }
+
+  makeShader(uniforms, localMatrix) {
+    return new JsiSkShader(this.CanvasKit, this.ref.makeShader(uniforms, localMatrix !== undefined ? JsiSkMatrix.fromValue(localMatrix) : localMatrix));
+  }
+
+  makeShaderWithChildren(uniforms, children, localMatrix) {
+    return new JsiSkShader(this.CanvasKit, this.ref.makeShaderWithChildren(uniforms, children === null || children === void 0 ? void 0 : children.map(child => JsiSkShader.fromValue(child)), localMatrix !== undefined ? JsiSkMatrix.fromValue(localMatrix) : localMatrix));
+  }
+
+  getUniform(index) {
+    return this.ref.getUniform(index);
+  }
+
+  getUniformCount() {
+    return this.ref.getUniformCount();
+  }
+
+  getUniformFloatCount() {
+    return this.ref.getUniformFloatCount();
+  }
+
+  getUniformName(index) {
+    return this.ref.getUniformName(index);
+  }
+
+}
+//# sourceMappingURL=JsiSkRuntimeEffect.js.map

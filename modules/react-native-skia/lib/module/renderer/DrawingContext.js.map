@@ -1,0 +1,1 @@
+{"version":3,"names":[],"sources":["DrawingContext.ts"],"sourcesContent":["import type { DrawingInfo } from \"../views\";\nimport type { Skia, SkCanvas, SkPaint } from \"../skia/types\";\n\nexport interface DrawingContext extends Omit<DrawingInfo, \"touches\"> {\n  Skia: Skia;\n  canvas: SkCanvas;\n  paint: SkPaint;\n}\n"],"mappings":""}

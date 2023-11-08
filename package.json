@@ -22,6 +22,7 @@
     "@expo/vector-icons": "^13.0.0",
     "@react-native/metro-config": "^0.73.2",
     "@react-navigation/native": "^6.1.9",
+    "@shopify/react-native-skia": "file:./modules/react-native-skia",
     "expo": "~49.0.16",
     "expo-font": "~11.6.0",
     "expo-linking": "~6.0.0",

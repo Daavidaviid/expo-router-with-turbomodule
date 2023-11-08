@@ -2,10 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import NativeSampleModule from '../tm/NativeSampleModule';
 import Animated, { useDerivedValue } from 'react-native-reanimated';
+import { Canvas, Circle, Group } from '@shopify/react-native-skia';
 
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
 export default function Page() {
+  const width = 256;
+  const height = 256;
+  const r = width * 0.33;
+
   const textValue = useDerivedValue(() => {
     return NativeSampleModule.getFrenchHello();
   });
@@ -24,6 +29,14 @@ export default function Page() {
       </Text>
 
       <AnimatedTextInput style={styles.title} editable={false} value={textValue} />
+
+      <Canvas style={{ width, height }}>
+        <Group blendMode="multiply">
+          <Circle cx={r} cy={r} r={r} color="cyan" />
+          <Circle cx={width - r} cy={r} r={r} color="magenta" />
+          <Circle cx={width / 2} cy={width - r} r={r} color="yellow" />
+        </Group>
+      </Canvas>
     </View>
   );
 }
