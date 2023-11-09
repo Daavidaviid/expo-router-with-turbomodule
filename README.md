@@ -3,6 +3,10 @@
 https://reactnative.dev/docs/next/the-new-architecture/cxx-cxxturbomodules#3-module-registration
 https://reactnative.dev/docs/next/the-new-architecture/cxx-custom-types
 
+## Download react-native-skia
+
+Follow the instruction from https://github.com/Shopify/react-native-skia/pull/1961
+
 ## Launch the app
 
 1. Run `bun i`
@@ -84,7 +88,6 @@ export default function Page() {
 Then run `bunx expo run:ios` or `bunx expo run:android`
 
 ![](./repo_images/bonjour.png)
-
 
 ## Notes
 

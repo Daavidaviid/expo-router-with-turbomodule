@@ -82,5 +82,6 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "*.ipp": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/Users/lepatron/workspace/app-with-turbomodule-and-expo-router/android/app/src/main/jni"
 }

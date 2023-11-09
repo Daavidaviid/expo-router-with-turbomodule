@@ -41,3 +41,5 @@ expo-env.d.ts
 # @end expo-cli
 
 android/app/.cxx
+
+modules/react-native-skia/*
